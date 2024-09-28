@@ -1,0 +1,428 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    position: relative;
+}
+
+.spotify-logo {
+    width: 40px; Adjust size of the Spotify logo 
+    height: auto;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
+.house-icon{
+    position: relative;
+    display: flex;
+    background-color: #121212;
+    color: white;
+    top: 15px;
+    left: 375px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.search-container {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-color: #999;
+    bottom: 30px;
+    flex-shrink: 1;
+}
+
+.search-input {
+    width: 100%;
+    height: 45px;
+    padding: 5px 50px 10px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    background-color: #121212;
+
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+}
+
+.jar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+}
+a{
+    color: #999;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.sidebar{
+    width: 340px;
+    height: 10rem;
+    background-color: green;
+    border-radius: 1rem;
+}
+.main-content{
+    background-color: red;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+}
+.musicplayer{
+    background-color: yellow;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 4.5rem;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    /* display: flex; */
+    flex-direction: row;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+}
+
+/* Spotify Logo */
+.spotify-logo {
+    width: 35px;
+    /* Adjust size of the Spotify logo */
+    height: auto;
+    position: relative;
+    top: 20;
+    left: 20;
+}
+
+/* Search container with house icon */
+.search-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 600px;
+    margin: 0 auto;
+    background-color: blue;
+    /* position: fixed; */
+}
+
+/* House icon on the left */
+.house-icon {
+    color: white;
+    font-size: 24px;
+    margin-right: 4%;
+}
+
+/* Search bar area */
+.search-bar {
+    position: relative;
+    width: 100%;
+    /* Set width to 100% for responsiveness */
+    max-width: 450px;
+    /* Limit the max width */
+    margin-left: 30px;
+    background-color: brown;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 50px 10px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+.jar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+header .spotify-logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
+
+.main {
+    display: flex;
+    height: calc(100vh - 122px);
+    /* padding-top: 100px; */
+    /* flex-grow: 1; */
+    width: 100%;
+}
+
+/* .sidebar{
+    background-color: green;
+    width: 340px;
+    padding: 20px;
+} */
+.sidebar {
+    background-color: green;
+    width: 340px;
+    padding: 20px;
+    height: calc(100vh - 122px);
+    /* Full height minus header and music player */
+    position: fixed;
+    top: 50px;
+    left: 0;
+    overflow-y: auto;
+    bottom: 72px;
+    border-radius: 1rem;
+    /* margin-left: -600px; */
+}
+
+.main-content {
+    background-color: yellow;
+    padding: 20px;
+    position: relative;
+    margin-left: 340px;
+    flex: 1;
+    height: calc(100vh - 122px);
+    border-radius: 1rem;
+}
+
+.musicplayer {
+    background-color: red;
+    position: fixed;
+    bottom: 0px;
+    height: 72px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .spotify-logo {
+        width: 25px;
+        /* Reduce logo size on smaller screens */
+        top: 10px;
+        left: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        /*Ensure the container takes up full width*/
+        padding: 10px;
+    }
+
+    .house-icon {
+        /* margin-right: 5px; */
+        font-size: 20px;
+        /* Reduce house icon size */
+    }
+
+    .search-bar {
+        width: 100%;
+        /*Ensure search bar fills the available space */
+        max-width: none;
+    }
+
+    .search-input {
+        padding: 10px 40px 10px 35px;
+        /* Adjust padding */
+        font-size: 14px;
+        /* Slightly reduce font size */
+    }
+
+    .search-icon,
+    .jar-icon {
+        font-size: 18px;
+        /* Reduce icon size inside input */
+    }
+}
+
+/* Medium screens like tablets */
+@media (max-width: 900px) {
+    .spotify-logo {
+        width: 20px;
+        /* Adjust logo size for tablets */
+    }
+
+    .search-container {
+        width: 90%;
+        /* Make search bar container wider on tablets */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    font-family: "Montserrat", sans-serif;
+    margin:0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    background-color: green;
+    width: 340px;
+    border-radius: 1rem;      16px
+}
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+}
+.musicplayer{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.nav{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem o.75rem;
+    border-radius: 1rem;
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem o.75rem; 
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i{
+    font-size: 1.25rem;    20px
+}
+.nav-option a{
+    font-size: 1rem;     16px
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem o.75rem;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+} */
+/* .icons{
+    display: flex;
+    font-size: 1.25rem;
+} */
